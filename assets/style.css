@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 1em sans-serif;
+  background-color: black;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    color: rgb(255, 136, 255);
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 40px;
+  }
+
+  p {
+    text-align: center;
+    color: white;
+  }
+
+  input {
+  color: black;
+  margin-top: 40px;
+  padding: 14px;
+  padding-left: 40px;
+  width: 250px;
+  border-radius: 50px;
+  border-color: rgb(246, 143, 246);
+  background-image: url(./lupa.png);
+  background-position-x: 0;
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: 10px;
+  text-align: center;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #a316ef;
+
+  ul {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo{
+  width: 10dvh;
+}
+}
+
+li a {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+li a button {
+  background-color: #800fbd;
+  color: white;
+  text-decoration: none;
+  padding: 8px;
+  font-size: 17px;
+  border-radius: 7px;
+  box-shadow: none;
+  border: none;
+}
+
+

@@ -4,67 +4,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página de Eventos</title>
-  <link rel="stylesheet" href="./assets/css/styles.css">
-
+  <title>Eventos FATEC — encontre o próximo evento</title>
+  <meta name="description"
+    content="Sistema de cadastro de eventos e inscrições, o projeto do semestre de Desenvolvimento Web.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,300..500,0..1,-50..200&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
-  <nav class="header-menu">
-    <img class="logo" alt="logotipo" title="Logotipo" src="./assets/images/logotipo.png" />
-    <ul class="navigation">
-      <li class="item">
-        <a class="link active" href="eventos.html">Eventos</a>
-      </li>
-      <li class="item">
-        <a class="link" href="categorias.html">Categorias</a>
-      </li>
-      <li class="item">
-        <button class="call-to-action">Explorar Eventos</button>
-      </li>
-    </ul>
-  </nav>
 
-  <header class="hero">
-    <h1 class="title">Onde sua turma <span class="highlight">encontra o próximo evento</span></h1>
-    <p class="description">Aqui você encontra os melhores eventos da região</p>
-
-    <input class="search" type="text" placeholder="Buscar por nome do evento..." />
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <span class="brand-mark"><span class="material-symbols-outlined">confirmation_number</span></span>
+        Eventos<span class="gradient-text">Fatec</span>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html" class="active">Eventos</a>
+        <a href="#eventosGrid">Categorias</a>
+      </nav>
+      <a href="#eventosGrid" class="btn btn-ghost">
+        <span class="material-symbols-outlined" style="font-size:18px">explore</span>
+        Explorar
+      </a>
+    </div>
   </header>
 
-  <section class="events">
-    <nav class="filter">
-      <ul class="filter-list">
-        <li class="item active">Todos</li>
-        <li class="item">Workshop</li>
-        <li class="item">Palestra</li>
-        <li class="item">Hackathon</li>
-        <li class="item">Meetup</li>
-        <li class="item">Curso</li>
-        <li class="item">Show</li>
-      </ul>
-    </nav>
+  <main>
+    <section class="hero container">
+      <div class="eyebrow"><span class="dot"></span>Protótipo de navegação · dados mockados</div>
+      <h1>Onde a sua turma <span class="gradient-text">encontra o próximo evento</span></h1>
+      <p class="lead">
+        Este é o site que vamos construir juntos ao longo do semestre: lista de eventos,
+        página de detalhe e formulário de inscrição, tudo com um banco de dados de verdade.
+      </p>
 
-    <section class="list">
-      <article class="card">
-        <p class="category">Workshop</p>
-        <h3 class="title">HTML do Zero ao Avançado</h3>
-        <p class="place">Bloco, sala 4</p>
+      <div class="busca-wrap">
+        <span class="material-symbols-outlined">search</span>
+        <input type="text" id="inputBusca" placeholder="Buscar por nome do evento...">
+      </div>
 
-        <section class="information">
-          <span class="quantity">17 vagas restantes</span>
-          <span class="percentage">57%</span>
-        </section>
-
-        <a class="link" href="#">Ver detalhes</a>
-      </article>
+      <div class="filtros" id="filtrosCategoria"></div>
     </section>
-  </section>
+
+    <section class="eventos-secao container">
+      <p class="eventos-contador" id="eventosContador"></p>
+
+      <div id="skeletonWrap" class="eventos-grid">
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
+      </div>
+
+      <div id="eventosGrid" class="eventos-grid escondido"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <span class="brand-mark"><span class="material-symbols-outlined">confirmation_number</span></span>
+        Eventos<span class="gradient-text">Fatec</span>
+      </a>
+      <span>Protótipo de navegação · Desenvolvimento Web, 2º ciclo</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/home.js"></script>
 </body>
 
 </html>
